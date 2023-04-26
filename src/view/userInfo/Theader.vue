@@ -1,7 +1,7 @@
 <template>
   <div class="Theader" ref="thead">
     <div class="goHome">
-      <h1><i class="el-icon-guide"></i> 返回首页</h1>
+      <h1 @click="goHome"><i class="el-icon-guide"></i> 返回首页</h1>
     </div>
     <div class="user">
       <div class="info">你好,111</div>
@@ -28,6 +28,9 @@ export default {
       localStorage.setItem("color", this.color);
       this.$refs.thead.style["background-color"] = this.color;
       this.$bus.$emit("changeColor", this.color);
+    },
+    goHome() {
+      this.$router.push("/index");
     },
   },
   mounted() {

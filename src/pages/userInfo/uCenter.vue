@@ -1,6 +1,6 @@
 <template>
   <div class="ucenter">
-    <el-card>
+    <el-card class="userI">
       <div class="thead">
         <div class="avar">
           <el-avatar shape="square" :src="squareUrl"></el-avatar>
@@ -63,13 +63,26 @@
     </el-card>
 
     <el-card class="table">
-      <el-table :data="tableData" stripe style="width: 100%">
-        <el-table-column prop="date" label="日期" width="180">
-        </el-table-column>
-        <el-table-column prop="name" label="姓名" width="180">
-        </el-table-column>
-        <el-table-column prop="address" label="地址"> </el-table-column>
-      </el-table>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">订单号</th>
+            <th style="width: 20%">联系人名称</th>
+            <th style="width: 20%">订单金额</th>
+            <th style="width: 20%">下单时间</th>
+            <th style="width: 20%">订单状态</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in orderList" :key="item.id" class="bodyTr">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.money }}</td>
+            <td>{{ item.time }}</td>
+            <td style="color: red">{{ item.status }}</td>
+          </tr>
+        </tbody>
+      </table>
     </el-card>
   </div>
 </template>
@@ -78,26 +91,13 @@
 export default {
   data() {
     return {
-      tableData: [
+      orderList: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄",
-        },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄",
-        },
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄",
+          id: 1,
+          name: "zzh",
+          money: "188",
+          time: "2023-04-12",
+          status: "待取件",
         },
       ],
       squareUrl:
@@ -118,6 +118,26 @@ export default {
 </script>
 
 <style scoped>
+.bodyTr:hover {
+  background-color: #ccc;
+}
+th {
+  font-size: 17px;
+  font-weight: 600;
+  height: 50px;
+}
+td {
+  height: 40px;
+  text-align: center;
+}
+th {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100% !important;
+}
 .table {
   margin-top: 15px;
 }
@@ -142,7 +162,6 @@ export default {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  /* justify-content: center; */
 }
 .cateAll {
   margin-top: 15px;
@@ -180,11 +199,10 @@ export default {
   display: flex;
 }
 .avar {
-  /* float: left; */
   width: 70px;
   height: 70px;
 }
-.el-card {
+.userI {
   display: flex;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <!-- 导航 -->
   <div class="nav">
-    <div class="navAll">
+    <div class="navAll" @mouseenter="handleShow" @mouseleave="handleNoShow">
       全部商品分类
-      <div class="navOneList">
+      <div class="navOneList" v-show="isShow">
         <ul>
           <li v-for="item in navList" :key="item.id">
             <a href="#"
@@ -42,6 +42,7 @@ export default {
   data() {
     return {
       activeId: 1,
+      isShow: true,
       navtitleList: [
         {
           id: 1,
@@ -71,6 +72,21 @@ export default {
   },
   methods: {
     ...mapActions("home", ["getNavListAct"]),
+    handleShow() {
+      if (this.$route.path !== "/index/home") {
+        this.isShow = true;
+      }
+    },
+    handleNoShow() {
+      if (this.$route.path !== "/index/home") {
+        this.isShow = false;
+      }
+    },
+  },
+  mounted() {
+    if (this.$route.path !== "/index/home") {
+      this.isShow = false;
+    }
   },
   created() {
     this.getNavListAct();
@@ -129,6 +145,7 @@ export default {
   width: 100%;
   height: 440px;
   background-color: #fbfbfb;
+  z-index: 999;
 }
 
 @keyframes widthOver {

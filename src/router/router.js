@@ -26,6 +26,16 @@ const routes = [
                 name: "register",
                 path: "register",
                 component: () => import('../pages/index/register.vue')
+            },
+            {
+                name: "goods",
+                path: "goods",
+                component: () => import('../pages/index/goods.vue'),
+                props(route){
+                    return {
+                        goods:route.query
+                    }
+                }
             }
         ]
     },

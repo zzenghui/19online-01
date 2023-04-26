@@ -11,7 +11,8 @@ import Nav from './components/Nav.vue'
 import Footer from './components/Footer.vue'
 import rightNav from '@/components/rightNav'
 import YANZHENG from './components/SIdentify.vue'
-
+import userHead from './pages/userInfo/header.vue'
+Vue.component('userHead', userHead)
 Vue.component('YANZHENG', YANZHENG)
 Vue.component('rightNav', rightNav)
 Vue.component('Thead', Thead)

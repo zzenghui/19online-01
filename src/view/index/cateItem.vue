@@ -21,6 +21,7 @@
           class="goodsItem"
           v-for="item in cateItem.goodsList"
           :key="item.id"
+          @click="goGoods(item)"
         >
           <div class="topimg">
             <img :src="item.img" alt="" />
@@ -41,6 +42,14 @@
 <script>
 export default {
   props: ["cateItem"],
+  methods: {
+    goGoods(goods) {
+      this.$router.push({
+        name: "goods",
+        query: goods,
+      });
+    },
+  },
 };
 </script>
 
