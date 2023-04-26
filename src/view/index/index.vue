@@ -1,19 +1,19 @@
 <template>
   <div class="index">
-    <Thead/>
+    <Thead ref="thead" />
+    <router-view></router-view>
+    <Footer />
+    <rightNav />
   </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    
-  },
+  
 };
 </script>
 
 <style scoped>
 .index {
-
 }
 </style>

@@ -26,20 +26,29 @@
         </div>
       </div>
       <div class="userInfo">
-        <div class="lineOne">
-          您好! &ensp; <span>请登录</span> &ensp; 注册 &emsp;&emsp;
+        <div class="lineOne" v-if="!user.username">
+          您好! &ensp; <span @click="goLogin">请登录</span> &ensp; 注册
+          &emsp;&emsp;
           <i
             class="el-icon-platform-eleme"
             style="font-size: 20px; color: #18a8ff"
           ></i>
         </div>
+
+        <div class="lineOne" v-else>
+          您好! &ensp; {{ user.username }} &ensp;
+          <span class="goMember" @click="goMember">进入会员中心</span>
+          <span @click="logout">退出</span>
+          &emsp;&emsp;
+        </div>
+
         <div class="cart">
           <i class="el-icon-shopping-cart-full"></i>
           我的购物车
           <div class="num">{{ 0 }}</div>
         </div>
-        <br /><br>
-        
+        <br /><br />
+
         <div class="serverPhone">服务热线：400-884-1919</div>
       </div>
     </div>
@@ -50,8 +59,33 @@
 export default {
   data() {
     return {
+      user: JSON.parse(localStorage.getItem("user") || "{}"),
       selected: "下载",
     };
+  },
+  // watch: {
+  //   user: {
+  //     deep: true,
+  //     handler() {
+  //       console.log(123);
+  //     },
+  //   },
+  // },
+  methods: {
+    goMember() {
+      this.$router.push("/userInfo");
+    },
+    goLogin() {
+      this.$router.push("/index/login");
+    },
+    logout() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      location.reload();
+    },
+  },
+  mounted() {
+    this.$bus.$on("reload", () => {});
   },
 };
 </script>

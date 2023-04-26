@@ -14,7 +14,7 @@ instance.interceptors.request.use((req) => {
 
 instance.interceptors.response.use((res) => {
     NProgress.done()
-    return res.data
+    return res
 })
 
 
