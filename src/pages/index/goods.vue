@@ -55,9 +55,11 @@
           <span>(库存 10 件)</span>
         </div>
         <div class="todo">
-          <button class="buy">立即购买</button> &emsp;
+          <button class="buy" @click="addCart">立即购买</button> &emsp;
           <button class="addCart" @click="addCart">加入购物车</button>&emsp;
-          <span class="lookCart">查看购物车</span>
+          <span class="lookCart" @click="$router.push('/userInfo/cart')"
+            >查看购物车</span
+          >
         </div>
       </div>
     </div>
@@ -87,12 +89,17 @@ export default {
       console.log(val);
     },
     addCart() {
-      this.goods.num = this.num;
-      this.goods.selected = false;
-      this.goods.id = nanoid();
-      console.log(this.goods);
-      this.addCartAct(this.goods);
-      this.$toast.center("加入购物车成功");
+      let token = localStorage.getItem("token");
+      if (token) {
+        this.goods.num = this.num;
+        this.goods.selected = false;
+        this.goods.id = nanoid();
+        console.log(this.goods);
+        this.addCartAct(this.goods);
+        this.$toast.center("已加入购物车,请前去用户中心付款");
+      } else {
+        this.$toast.center("您还未登录,请先登录");
+      }
     },
   },
   components: { Zoom, Product },

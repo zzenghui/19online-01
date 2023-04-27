@@ -6,7 +6,7 @@
           <el-avatar shape="square" :src="squareUrl"></el-avatar>
         </div>
         <div class="info">
-          <div class="name changecolor">123</div>
+          <div class="name changecolor">{{ user.username }}</div>
           <p>普通会员</p>
         </div>
       </div>
@@ -100,6 +100,7 @@ export default {
           status: "待取件",
         },
       ],
+      user: {},
       squareUrl:
         "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
     };
@@ -113,6 +114,9 @@ export default {
         item.style.color = val;
       });
     });
+  },
+  created() {
+    this.user = JSON.parse(localStorage.getItem("user"));
   },
 };
 </script>

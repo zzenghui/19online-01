@@ -4,14 +4,14 @@
       <h1 @click="goHome"><i class="el-icon-guide"></i> 返回首页</h1>
     </div>
     <div class="user">
-      <div class="info">你好,111</div>
+      <div class="info">你好,{{ user.username }}</div>
       <div class="block">
         <el-color-picker
           v-model="color"
           @change="handleColor"
         ></el-color-picker>
       </div>
-      <div class="out">安全退出</div>
+      <div class="out" @click="logout">安全退出</div>
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@ export default {
   data() {
     return {
       color: null,
+      user: null,
     };
   },
   methods: {
@@ -32,9 +33,19 @@ export default {
     goHome() {
       this.$router.push("/index");
     },
+    logout() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      this.$router.replace("/index/home");
+    },
   },
   mounted() {
     this.$refs.thead.style["background-color"] = localStorage.getItem("color");
+
+    console.log(JSON.parse(localStorage.getItem("user")));
+  },
+  created() {
+    this.user = JSON.parse(localStorage.getItem("user"));
   },
 };
 </script>

@@ -9,6 +9,10 @@ export default {};
 </script>
 
 <style>
+body {
+  word-wrap: break-word !important;
+  word-break: normal !important;
+}
 * {
   padding: 0;
   margin: 0;

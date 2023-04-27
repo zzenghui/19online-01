@@ -27,9 +27,13 @@ import {
     TableColumn,
     InputNumber,
     Breadcrumb,
-    BreadcrumbItem
+    BreadcrumbItem,
+    DropdownMenu,
+    DropdownItem
 
 } from 'element-ui'
+Vue.use(DropdownItem)
+Vue.use(DropdownMenu)
 Vue.use(BreadcrumbItem)
 Vue.use(Breadcrumb)
 Vue.use(InputNumber)

@@ -4,6 +4,7 @@ const actions = {
     //获取导航数据
     async getNavListAct({ commit }) {
         let res = await getNavListApi()
+        console.log(res);
         if (res.status == 200) {
             commit('GET_NAV_LIST', res.data)
         }

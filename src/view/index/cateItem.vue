@@ -12,11 +12,12 @@
       <div class="carous">
         <el-carousel :interval="5000" arrow="always" height="360px">
           <el-carousel-item v-for="item in cateItem.carousalList" :key="item">
-            <img :src="item" alt="" style="width: 200px; height: 360px" />
+            <img v-lazy="item" alt="" style="width: 200px; height: 360px" />
           </el-carousel-item>
         </el-carousel>
       </div>
       <div class="goodslist">
+        <!-- 
         <div
           class="goodsItem"
           v-for="item in cateItem.goodsList"
@@ -33,23 +34,27 @@
               <i class="el-icon-shopping-cart-1"></i>
             </div>
           </div>
-        </div>
+        </div> -->
+
+        <goodsItem
+          v-for="goods in cateItem.goodsList"
+          :key="goods.id"
+         
+          :item="goods"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import goodsItem from "@/view/index/goodsItem";
 export default {
   props: ["cateItem"],
   methods: {
-    goGoods(goods) {
-      this.$router.push({
-        name: "goods",
-        query: goods,
-      });
-    },
+   
   },
+  components: { goodsItem },
 };
 </script>
 

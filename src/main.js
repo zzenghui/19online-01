@@ -12,12 +12,23 @@ import Footer from './components/Footer.vue'
 import rightNav from '@/components/rightNav'
 import YANZHENG from './components/SIdentify.vue'
 import userHead from './pages/userInfo/header.vue'
+import VueLazyload from 'vue-lazyload'
+
 Vue.component('userHead', userHead)
 Vue.component('YANZHENG', YANZHENG)
 Vue.component('rightNav', rightNav)
 Vue.component('Thead', Thead)
 Vue.component('Footer', Footer)
 Vue.component('Nav', Nav)
+
+Vue.use(VueLazyload, {
+  preLoad: 1,
+  error: '../public/static/images/error.jpg',
+  loading: '../public/static/images/loading.gif',
+  attempt: 2,
+})
+
+
 Vue.use(Toast, {
   defaultType: 'center',
   duration: 2500,

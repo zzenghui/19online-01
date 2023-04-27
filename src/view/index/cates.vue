@@ -4,7 +4,7 @@
       <div class="title">{{ item.title }}</div>
       <div class="goods">
         <div class="goodsItemP" v-for="item2 in item.imgs" :key="item2">
-          <img :src="item2" alt="" />
+          <img v-lazy="item2" alt="" />
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
       >
         <div class="goodsitem" v-for="item2 in item.children" :key="item2.id">
           <div class="img">
-            <img :src="item2.img" alt="" />
+            <img v-lazy="item2.img" alt="" />
           </div>
           <div class="detail">
             <div class="name">{{ item2.name }}</div>

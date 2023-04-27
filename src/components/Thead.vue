@@ -42,10 +42,10 @@
           &emsp;&emsp;
         </div>
 
-        <div class="cart">
+        <div class="cart" @click="$router.push('/userInfo/cart')">
           <i class="el-icon-shopping-cart-full"></i>
           我的购物车
-          <div class="num">{{ 0 }}</div>
+          <div class="num">{{ goodsNum }}</div>
         </div>
         <br /><br />
 
@@ -56,7 +56,12 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
+  computed: {
+    ...mapGetters("cart", ["goodsNum"]),
+  },
   data() {
     return {
       user: JSON.parse(localStorage.getItem("user") || "{}"),

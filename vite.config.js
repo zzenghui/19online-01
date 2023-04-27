@@ -1,6 +1,8 @@
 import { createVuePlugin } from "vite-plugin-vue2";
 import path from 'path'
-import  styleImport  from 'vite-plugin-style-import'
+import nobug from './noBug'
+console.log(nobug);
+import styleImport from 'vite-plugin-style-import'
 export default {
     resolve: {
         // 忽略后缀名的配置选项, 添加 .vue 选项时要记得原本默认忽略的选项也要手动写入

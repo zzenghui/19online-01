@@ -499,21 +499,21 @@ let cateItemList = [
             },
             {
                 id: 2,
-                name: '水井坊天皓宸(帝王黄)',
+                name: '衡昌烧坊青玉经典装53度(500ML)',
                 img: '../../public/static/images/banner/goods2.jpg',
-                price: "152"
+                price: "892"
             },
             {
                 id: 3,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods2.jpg',
-                price: "1212"
+                name: '衡昌烧坊牛年生肖酒53度(500ML)',
+                img: '../../public/static/images/banner/goods4.jpg',
+                price: "867"
             },
             {
                 id: 4,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods4.jpg',
-                price: "4545"
+                name: '习酒瑰宝53度(500ML)',
+                img: '../../public/static/images/banner/goods5.png',
+                price: "778"
             },
         ]
     },
@@ -522,34 +522,34 @@ let cateItemList = [
         title: "洋酒馆",
         navList: ['轩尼诗', '马爹利', '人头马', ' 拿破仑', ' 卡慕', ' 墨高'],
         carousalList: [
-            '../../public/static/images/banner/small1.jpg',
-            '../../public/static/images/banner/small2.jpg',
-            '../../public/static/images/banner/small3.jpg'
+            '../../public/static/images/banner/goodsB01.jpg',
+            '../../public/static/images/banner/goodsB02.jpg',
+            '../../public/static/images/banner/goodsB03.jpg'
         ],
         goodsList: [
             {
                 id: 1,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods1.jpg',
+                name: '轩尼诗XO金琼斯限量版(700ML)',
+                img: '../../public/static/images/banner/goods06_s.jpg',
                 price: "258"
             },
             {
                 id: 2,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods2.jpg',
+                name: '马爹利名仕2023年限量版(700ML)',
+                img: '../../public/static/images/banner/goods07.jpg',
                 price: "152"
             },
             {
                 id: 3,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods2.jpg',
-                price: "1212"
+                name: '马爹利蓝带2023年限量版(700ML)',
+                img: '../../public/static/images/banner/goods08.png',
+                price: "4444"
             },
             {
                 id: 4,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods4.jpg',
-                price: "4545"
+                name: '十四代无滤过纯米吟酿清酒(1.8L)',
+                img: '../../public/static/images/banner/goods09.jpg',
+                price: "585"
             },
         ]
     },
@@ -558,34 +558,34 @@ let cateItemList = [
         title: "威士忌馆",
         navList: ['麦卡伦', ' 日本威士忌', '百富', '  格兰杰', '  尊尼获加'],
         carousalList: [
-            '../../public/static/images/banner/small1.jpg',
-            '../../public/static/images/banner/small2.jpg',
-            '../../public/static/images/banner/small3.jpg'
+            '../../public/static/images/banner/goodsB05.jpg',
+            '../../public/static/images/banner/goodsB06.jpg',
+            '../../public/static/images/banner/goodsB07.jpg'
         ],
         goodsList: [
             {
                 id: 1,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods1.jpg',
+                name: '轩博臻品调和威士忌(700ML)',
+                img: '../../public/static/images/banner/goods10.jpg',
                 price: "258"
             },
             {
                 id: 2,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods2.jpg',
+                name: '轩博臻品调和威士忌(700ML)',
+                img: '../../public/static/images/banner/goods11.jpg',
                 price: "152"
             },
             {
                 id: 3,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods2.jpg',
-                price: "1212"
+                name: '苏格登12年纯麦威士忌新年礼盒(700ML)',
+                img: '../../public/static/images/banner/goods12.jpg',
+                price: "854"
             },
             {
                 id: 4,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods4.jpg',
-                price: "4545"
+                name: '麦卡伦臻味啡凡单一麦芽威士忌(700ML)',
+                img: '../../public/static/images/banner/googs13.jpg',
+                price: "1215"
             },
         ]
     },
@@ -594,33 +594,33 @@ let cateItemList = [
         title: "葡萄酒管",
         navList: ['奔富', '香槟', '法国', '智利', '白葡萄酒', '意大利'],
         carousalList: [
-            '../../public/static/images/banner/small1.jpg',
-            '../../public/static/images/banner/small2.jpg',
-            '../../public/static/images/banner/small3.jpg'
+            '../../public/static/images/banner/goodsB08.jpg',
+            '../../public/static/images/banner/goodsB09.jpg',
+            '../../public/static/images/banner/goodsB06.jpg'
         ],
         goodsList: [
             {
                 id: 1,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods1.jpg',
+                name: '铂姆铂金起泡酒(750ML)',
+                img: '../../public/static/images/banner/goods14.jpg',
                 price: "258"
             },
             {
                 id: 2,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods2.jpg',
+                name: '木桐嘉棣珍藏波亚克红葡萄酒(750ML)',
+                img: '../../public/static/images/banner/goods15.jpg',
                 price: "152"
             },
             {
                 id: 3,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods2.jpg',
+                name: '卡门萨克酒庄正牌干红葡萄酒(五级)750ML',
+                img: '../../public/static/images/banner/goods16.jpg',
                 price: "1212"
             },
             {
                 id: 4,
-                name: '水井坊天皓宸(帝王黄)',
-                img: '../../public/static/images/banner/goods4.jpg',
+                name: '波菲酒庄正牌干红葡萄酒(二级)750ML',
+                img: '../../public/static/images/banner/goods17.jpg',
                 price: "4545"
             },
         ]

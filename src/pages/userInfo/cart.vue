@@ -30,7 +30,7 @@
                 @change="handleCheck(cart.id)"
               />
             </td>
-            <td><img :src="cart.img" alt="" /></td>
+            <td><img v-lazy="cart.img" alt="" /></td>
             <td>{{ cart.name }}</td>
             <td>{{ cart.price }}</td>
             <td>

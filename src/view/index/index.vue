@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+
     <Thead ref="thead" />
     <router-view></router-view>
     <Footer />
@@ -8,8 +9,9 @@
 </template>
 
 <script>
+
 export default {
-  
+
 };
 </script>
 
